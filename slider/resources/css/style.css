@@ -1,0 +1,185 @@
+body {
+    width: 941px;
+    height: 730px;
+    display: grid;
+    overflow: hidden;
+    
+    grid-template-areas: "other1 other1 other1 other1 other2 other2 other2 other2 other2 other2 other2 other2"
+                        "upper upper upper upper upper upper upper upper textar textar textar textar"
+                        "lower lower lower lower lower lower lower lower textar textar textar textar"
+                        "other3 other3 other3 other3 other3 other3 other3 other3 other3 other3 other3 other3";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:  1fr 200px 200px 1fr;
+    justify-items: stretch;
+    column-gap: 19px;
+    row-gap: 10px ;
+    }
+
+/*text*/
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.2px;
+    color: #134880;
+}
+
+p {
+    font-family: 'Source Sans Pro' sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    color: #484A4C;
+
+}
+
+/*containers*/
+
+.text-container {
+    background-color: white;
+    grid-area: textar;
+    z-index: 2;
+}
+
+.upper-slider-container {
+    grid-area: upper;
+    overflow: hidden;
+}
+
+.upper-container {
+    display: flex;
+    flex-direction: row-reverse;
+    transform: translateX(320px); /*initial translate value*/ 
+}
+
+.lower-slider-container {
+    grid-area: lower;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.lower-container {
+    display: flex;
+    flex-direction: row-reverse;
+    transform: translateX(500px); /*initial translate value*/
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    background-color: white;
+    z-index: 2;
+}
+
+/*buttons*/
+
+.btn {
+    
+    background-size: 10px 16px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+
+    outline: none; 
+}
+
+.next-btn {
+    background-image: url('../img/arrow-gray-left.png');
+    margin-bottom: 10px;
+}
+
+.prev-btn {
+    background-image: url('../img/arrow-gray-right.png');
+    
+}
+
+.next-btn:hover {
+    background-image: url('../img/arrow-blue-left.png');
+    border-color: #134880;
+}
+
+.prev-btn:hover {
+    background-image: url('../img/arrow-blue-right.png');
+    border-color: #134880;
+}
+
+.next-btn:active {
+    background-size: 9px 15px;
+    border: 2px solid #134880;
+    color: #134880;
+    transition: background-size 10ms;
+}
+
+.prev-btn:active {
+    background-size: 9px 15px;
+    border: 2px solid #134880;
+    color: #134880;
+    transition: background-size 10ms;
+}
+
+/*photos*/
+
+img {
+    height: 200px;
+    width: auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 5px; 
+    float: right;
+}
+
+.photo img {
+    height: 200px;
+    width: auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 5px;
+}
+
+/*other content*/
+
+.other-content-1 {
+    grid-area: other1;
+    border-radius: 0 0 5px 5px;
+}
+
+.other-content-2{
+    grid-area: other2;
+    border-radius: 0 0 5px 5px;
+}
+
+.other-content-3 {
+    grid-area: other3;
+    border-radius: 5px 5px 0 0;
+    align-self: end;
+}
+
+.other-content-1, 
+.other-content-2,
+.other-content-3 {
+    background-color: #DDD;
+    height: 100px;
+}
+
+.other-elements-text {
+    color: white;
+    margin-top: 40px;
+    margin-left: 80px;
+
+    font-family: HelveticaNeue;
+    font-size: 15px;    
+    line-height: 18px;
+    letter-spacing: 0px;
+
+}
